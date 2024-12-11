@@ -1,0 +1,152 @@
+Aqui está a lista organizada por categorias e priorizada com foco no **funcional e operacional**, garantindo que você possa desenvolver as partes mais importantes primeiro. Vamos priorizar o essencial para obter resultados tangíveis no início e expandir conforme necessário.
+
+---
+
+### **Categoria 1: Segurança e Detecção de Contratos Maliciosos**
+
+**Objetivo**: Identificar contratos inteligentes maliciosos ou com vulnerabilidades críticas.
+
+1. **Contrato de Análise de Código de Tokens** *(Essencial)*  
+   - Verifica padrões de código malicioso (backdoors, minting arbitrário).
+   - **Funções**:
+     - `checkMintAuthority()`
+     - `scanForBackdoors()`
+     - `validateTokenSupply()`
+
+2. **Contrato de Verificação de Liquidez** *(Essencial)*  
+   - Analisa pools de liquidez para detectar remoção de liquidez (rug pulls).
+   - **Funções**:
+     - `checkLiquidityPool()`
+     - `monitorLiquidityChanges()`
+
+3. **Contrato de Identificação de Padrões de Ataque** *(Prioridade Média)*  
+   - Detecta padrões de ataques como reentrância e overflows.
+   - **Funções**:
+     - `detectReentrancyRisk()`
+     - `detectOverflowUnderflow()`
+
+4. **Contrato de Auditoria Dinâmica** *(Prioridade Média)*  
+   - Realiza auditorias automatizadas para detectar conformidade com padrões de segurança.
+   - **Funções**:
+     - `runAudit()`
+     - `checkCompliance()`
+
+---
+
+### **Categoria 2: Análise de Smart Money**
+
+**Objetivo**: Monitorar carteiras influentes para identificar tendências e oportunidades de mercado.
+
+1. **Contrato de Rastreio de Smart Money** *(Essencial)*  
+   - Monitora carteiras de grandes investidores e analisa movimentações.
+   - **Funções**:
+     - `trackTopHolders()`
+     - `monitorTokenMovements()`
+
+2. **Contrato de Monitoramento de Interações** *(Prioridade Média)*  
+   - Rastrea interações de carteiras com contratos.
+   - **Funções**:
+     - `getInteractions()`
+     - `trackSuspiciousActivity()`
+
+3. **Contrato de Análise de Distribuição de Tokens** *(Prioridade Média)*  
+   - Verifica concentração de tokens para detectar manipulações de mercado.
+   - **Funções**:
+     - `checkTokenDistribution()`
+     - `detectCentralizedOwnership()`
+
+---
+
+### **Categoria 3: Funcionalidades Operacionais (Swaps e Consultas)**
+
+**Objetivo**: Permitir interações básicas, como swaps e consultas de dados on-chain.
+
+1. **Contrato de Execução de Swaps** *(Essencial)*  
+   - Gerencia trocas de tokens em DEXs.
+   - **Funções**:
+     - `executeSwap()`
+     - `getSwapRate()`
+
+2. **Contrato de Consulta de Dados** *(Essencial)*  
+   - Retorna informações básicas sobre tokens e carteiras.
+   - **Funções**:
+     - `getTokenInfo()`
+     - `getWalletBalance()`
+
+3. **Contrato de Monitoramento de Preços** *(Prioridade Média)*  
+   - Integra-se a oráculos para obter preços em tempo real.
+   - **Funções**:
+     - `getPrice()`
+     - `monitorPriceFluctuations()`
+
+---
+
+### **Categoria 4: Rastreamento e Histórico**
+
+**Objetivo**: Rastrear e armazenar dados históricos de transações e contratos.
+
+1. **Contrato de Histórico de Transações** *(Prioridade Média)*  
+   - Rastreia transações de uma carteira ou contrato.
+   - **Funções**:
+     - `getTransactionHistory()`
+     - `monitorLargeTransactions()`
+
+2. **Contrato de Agregação de Dados** *(Prioridade Média)*  
+   - Consolida informações de diferentes fontes, como pools e tokens.
+   - **Funções**:
+     - `aggregateLiquidityData()`
+     - `aggregateTokenData()`
+
+---
+
+### **Categoria 5: Gerenciamento de Confiança**
+
+**Objetivo**: Manter listas de contratos confiáveis e suspeitos.
+
+1. **Contrato de Whitelist/Blacklist** *(Prioridade Média)*  
+   - Mantém listas de contratos confiáveis ou suspeitos para acelerar análises.
+   - **Funções**:
+     - `addToWhitelist()`
+     - `addToBlacklist()`
+     - `isBlacklisted()`
+
+---
+
+### **Categoria 6: Lançamentos e Oportunidades**
+
+**Objetivo**: Monitorar novos tokens e identificar oportunidades (ou fraudes).
+
+1. **Contrato de Rastreamento de Lançamentos de Tokens** *(Prioridade Média)*  
+   - Detecta novos contratos de tokens e analisa sua legitimidade.
+   - **Funções**:
+     - `getNewTokenLaunches()`
+     - `checkAirdropLegitimacy()`
+
+---
+
+### **Prioridades no Início do Projeto**
+Para garantir resultados rápidos, concentre-se nos seguintes contratos na primeira etapa:
+
+1. **Segurança e Detecção de Contratos Maliciosos**:
+   - Contrato de Análise de Código de Tokens.
+   - Contrato de Verificação de Liquidez.
+
+2. **Funcionalidades Operacionais**:
+   - Contrato de Execução de Swaps.
+   - Contrato de Consulta de Dados.
+
+3. **Análise de Smart Money**:
+   - Contrato de Rastreio de Smart Money.
+
+Esses contratos cobrem as principais funcionalidades e segurança, enquanto fornecem a base para análises futuras.
+
+---
+
+### **Foco Operacional e Simplicidade**
+Como você está desenvolvendo tudo sozinho, é essencial manter o escopo inicial **focado no essencial** e adicionar mais contratos conforme o progresso. Além disso:
+
+- **Utilize frameworks e bibliotecas**: Por exemplo, o **Anchor** para Solana pode facilitar a criação e gerenciamento dos contratos.
+- **Automatize testes**: Scripts para testar os contratos durante o desenvolvimento economizarão muito tempo.
+- **Documente cada contrato**: Crie documentação básica para cada função, ajudando no entendimento e manutenção futura.
+
+Se precisar de exemplos de código ou orientação para começar com algum contrato específico, posso fornecer!
